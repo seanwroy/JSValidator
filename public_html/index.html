@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Assignment 2 for Sean Roy</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+    </head>
+    <body>
+        <script src="scripts/validator.js"></script>
+        <script src="scripts/strengthchecker.js"></script>
+        
+        <h1>Submission form</h1>
+        
+        <div class="formcontent">
+        <form name="myForm" action="thank_you.html" method="get" onsubmit="return validate()">
+           
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" oninput="return validate()">
+            <img src="rsc/x.png" id="x" style="visibility: hidden;" alt="xmark">
+            <img src="rsc/check.png" id="check" style="visibility: hidden;" alt="checkmark"><br>
+
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="pass" oninput="checkstrength()">
+            <img src="rsc/x.png" id="x1" style="visibility: hidden;" alt="xmark">
+            <img src="rsc/check.png" id="check1" style="visibility: hidden;" alt="checkmark"><br>
+            <p>Strength: <progress value="0" max="100" id="strengthchecker"></progress></p>
+
+            
+            <label for="confirmpass">Confirm password</label>
+            <input type="password" id="confirmpass" name="confirmpass" oninput="return validate()">
+            <img src="rsc/x.png" id="x2" style="visibility: hidden;" alt="xmark">
+            <img src="rsc/check.png" id="check2" style="visibility: hidden;" alt="checkmark"><br>
+            
+            <p>Select Gender:
+            <img src="rsc/x.png" id="x3" style="visibility: hidden;" alt="xmark">
+            <img src="rsc/check.png" id="check3" style="visibility: hidden;" alt="checkmark"></p>
+            <input type="radio" name="gender" id="genders" value="male" onchange="return validate()">Male<br>
+            <input type="radio" name="gender" id="genders" value="female" onchange="return validate()">Female<br>
+            <input type="radio" name="gender" id="genders" value="other" onchange="return validate()">Other<br>
+            <br>
+            
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" title="Email" oninput="return validate()">
+            <img src="rsc/x.png" id="x4" style="visibility: hidden;" alt="xmark">
+            <img src="rsc/check.png" id="check4" style="visibility: hidden;" alt="checkmark"><br>
+            
+            <label for="contact">Contact number</label>
+            <input type="text" id="contact" name="contact" title="Contact" oninput="return validate()">
+            <img src="rsc/x.png" id="x5" style="visibility: hidden;" alt="xmark">
+            <img src="rsc/check.png" id="check5" style="visibility: hidden;" alt="checkmark"><br>
+            <br>
+      
+            <span id="msg"></span>
+            <br>
+            <br>
+            <input type="submit" value="Submit" id="sbbtn"> <input type="reset" value="Reset" id="rstbtn">
+            
+        </form>
+        </div>
+    </body>
+</html>

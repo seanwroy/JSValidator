@@ -1,0 +1,131 @@
+h1 {
+    text-align: center;
+    color: white;
+}
+
+body {
+    background-image: url("../rsc/background.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+div.formcontent {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    line-height: 18px;
+    width: 60%;
+    font-size: 15px;
+    border: 3px dashed #ccc;
+    background-color: #e0e0e0;
+}
+
+input[type=text], input[type=password]{
+    width: 20%;
+    height: 15px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#thanks{
+    display: block;
+    margin: 0 auto;
+}
+
+#sbbtn{
+    width: 20em;  height: 2em;
+    margin-left: 140px;
+}
+
+#rstbtn{
+    width: 20em;  height: 2em;
+}
+
+#x
+{
+    padding: 12px;
+    position: absolute;
+    z-index: 1;
+}
+        
+#check
+{
+    padding: 12px;
+    position: absolute;
+    z-index: 1;
+}
+
+#x1
+{
+    padding: 12px;
+    position: absolute;
+    z-index: 1;
+}
+        
+#check1
+{
+    padding: 12px;
+    position: absolute;
+    z-index: 1;
+}
+
+#x2
+{
+    padding: 12px;
+    position: absolute;
+    z-index: 1;
+}
+        
+#check2
+{
+    padding: 12px;
+    position: absolute;
+    z-index: 1;
+}
+
+#x3
+{
+    padding: 2px;
+    position: absolute;
+    z-index: 1;
+}
+        
+#check3
+{
+    padding: 2px;
+    position: absolute;
+    z-index: 1;
+}
+
+#x4
+{
+    padding: 12px;
+    position: absolute;
+    z-index: 1;
+}
+        
+#check4
+{
+    padding: 12px;
+    position: absolute;
+    z-index: 1;
+}
+
+#x5
+{
+    padding: 12px;
+    position: absolute;
+    z-index: 1;
+}
+        
+#check5
+{
+    padding: 12px;
+    position: absolute;
+    z-index: 1;
+}

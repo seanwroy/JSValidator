@@ -1,16 +1,14 @@
-    
     function validate()
     {
         var isValid = true;
         var checked = false;
         var msg = document.getElementById("msg");
-        var user = document.getElementById("username").value;
-        var password = document.getElementById("pass").value;
-        var confirmpassword = document.getElementById("confirmpass").value;
+        var user = document.getElementById("username");
+        var password = document.getElementById("pass");
+        var confirmpassword = document.getElementById("confirmpass");
         var radioButtons = document.myForm.genders;
-        var email = document.getElementById("email").value;
-        var phone = document.getElementById("contact").value;
-        var badEmailAddy = false;
+        var email = document.getElementById("email");
+        var phone = document.getElementById("contact");
         
         try{
             for (i = 0; i < radioButtons.length; i++)
@@ -19,31 +17,35 @@
                     checked = true;
                 }               
             }
+
+            var pattern = /^[a-zA-Z0-9]+$/;
+            var output = pattern.test(user.value);
             
-            if (checkUsername(user)){
+            if (output){
                 showCheck("check", "x");
             } else {
                 showCheckX("x", "check");
                 throw "The username field is required.";
             }
             
-            if (user.length < 5)
-            {
+            if (user.length < 5){
                 showCheckX("x", "check");
                 throw "Username must be longer than 5 characters.";
             }
             
-            if (checkPassword(password)){
+            
+            var pattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+            var output = pattern.test(password.value);
+            
+            if (output){
                 showCheck("check1", "x1");
-                
             } else {
                 showCheckX("x1", "check1");
                 throw "Password needs to be at least 5 characters.";
             }
             
-            if ((confirmpassword === password && password !== "")&&(password.length >= 5)){
+            if (confirmpassword.value === password.value){
                 showCheck("check2", "x2");
-                
             } else {
                 showCheckX("x2", "check2");
                 throw "The entered passwords do not match.";
@@ -51,20 +53,26 @@
             
             if (checked === true){
                 showCheck("check3", "x3");
-                
             } else {
                 showCheckX("x3", "check3");
                 throw "You must select a gender.";
             }
-            if (checkEmail(email)){
+            
+            var pattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/igm;
+            var output = pattern.test(email.value);
+                
+            if (output){
                 showCheck("check4", "x4");
             } else {
                 var badEmailAddy = true;
                 showCheckX("x4", "check4");
                 throw "Invalid email address.";
             }
+            
+            var pattern = /^\d{10}$/;
+            var output = pattern.test(phone.value);
            
-            if (checkPhone(phone)){
+            if (output){
                 showCheck("check5", "x5");
                 Clear();
             } else {
@@ -82,26 +90,6 @@
                 document.getElementById(check).style.visibility = "hidden";
             };
             
-            function checkUsername(str){
-                var pass = /^[a-zA-Z0-9]+$/;
-                return pass.test(str);
-            }
-            
-            function checkPassword(str){
-                var pass = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
-                return pass.test(str);
-            };
-            
-            function checkEmail(str){
-                var pass = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/igm;
-                return pass.test(str);
-            };
-            
-            function checkPhone(str){
-                var pass = /^\d{10}$/;
-                return pass.test(str);
-            };
-            
             function Clear() {
                 msg.innerHTML = "";
                 msg.style.color = "red";    
@@ -116,4 +104,3 @@
         
         return isValid;
     };
-   

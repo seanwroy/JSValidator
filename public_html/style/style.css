@@ -1,12 +1,6 @@
 h1 {
     text-align: center;
-    color: white;
-}
-
-body {
-    background-image: url("../rsc/background.jpg");
-    background-position: right;
-    background-repeat: no-repeat;
+    color: black;
 }
 
 div.formcontent {
@@ -18,7 +12,9 @@ div.formcontent {
     width: 60%;
     font-size: 15px;
     border: 3px dashed #ccc;
-    background-color: #e0e0e0;
+	background-image: url("../rsc/background.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
 input[type=text], input[type=password]{
@@ -32,9 +28,20 @@ input[type=text], input[type=password]{
     box-sizing: border-box;
 }
 
+body{
+	    background-color: #e0e0e0;
+}
+
+#thankyoubody{
+	background-image: url("../rsc/background.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
 #thanks{
     display: block;
     margin: 0 auto;
+	margin-top: 300px;
 }
 
 #sbbtn{

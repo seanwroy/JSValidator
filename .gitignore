@@ -1,1 +1,4 @@
-/nbproject/private/
+/nbproject/
+Gruntfile.js
+gulpfile.js
+*.json

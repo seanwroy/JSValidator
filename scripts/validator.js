@@ -27,7 +27,7 @@
                 showCheck("check", "x");
             } else {
                 showCheckX("x", "check");
-                throw "The username field is required.";
+                throw "The username field is required. Ensure that there are no special characters or spaces in your username.";
             }
             
             //checks username length

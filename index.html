@@ -12,6 +12,7 @@
         <script src="scripts/strengthchecker.js"></script>
         <script src="scripts/jquery.min.js"></script>
         
+        //JQuery script for changing colour of input box when in focus
         <script>
             $(document).ready(function(){
                 $("input").focus(function(){
@@ -28,7 +29,8 @@
         
         <div class="formcontent">
         <form name="myForm" action="thank_you.html" method="get" onsubmit="return validate()">
-           
+            
+            // TO DO: Find a more elegant way to deal with checkmarks and Xs
             <label for="username">Username</label>
             <input type="text" id="username" name="username">
             <img src="rsc/x.png" id="x" style="visibility: hidden;" alt="xmark">
